@@ -16,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
     public void toActivity (View view){
         switch (((Button) view).getText().toString()){
             case "Object":
-                startActivity (new Intent(this, activity_object.class));
+                startActivity (new Intent(this, ObjectActivity.class));
                 break;
             case "List":
-                startActivity (new Intent(this, activity_list.class));
+                startActivity (new Intent(this, ListActivity.class));
                 break;
             case "Camera":
-                startActivity (new Intent(this, activity_camera.class));
+                startActivity (new Intent(this, CameraActivity.class));
                 break;
             case "Storage":
-                startActivity (new Intent(this, activity_storage.class));
+                startActivity (new Intent(this, StorageActivity.class));
                 break;
         }
     }

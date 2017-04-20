@@ -11,7 +11,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
-public class activity_object extends AppCompatActivity {
+public class ObjectActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference postRef;
     DatabaseReference postsRef;

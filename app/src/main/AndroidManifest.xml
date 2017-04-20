@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.seanma.inclassassignment10_zhenzhenm">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,18 +23,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_camera"
+        <activity
+            android:name=".CameraActivity"
             android:label="Camera"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".activity_list"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ListActivity"
             android:label="Read BlogPosts"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".activity_object"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ObjectActivity"
             android:label="BlogPost Object"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".activity_storage"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".StorageActivity"
             android:label="Load Images"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.seanma.inclassassignment10_zhenzhenm"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/detail_name" />
     </application>
 
 </manifest>

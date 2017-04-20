@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">InClassAssignment10-ZhenzhenM</string>
+    <string name="object_name">BlogPost Object</string>
+    <string name="list_name">Read BlogPosts</string>
+    <string name="camera_name">Camera</string>
+    <string name="storage_name">BLoad Images</string>
+    <string name="detail_name">Blogpost Detail</string>
 </resources>
